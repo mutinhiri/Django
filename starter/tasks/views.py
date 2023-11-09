@@ -10,4 +10,4 @@ def index(request):
 
 
 def add(request):
-    return 
+    return render(request, 'tasks/add.html')
