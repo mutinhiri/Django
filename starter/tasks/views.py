@@ -5,7 +5,7 @@ tasks = ['foo', 'bar', 'baz']
 
 
 class NewTaskForm(forms.Form):
-    task = forms.CharField(label="New Task")
+    task = forms.CharField(label="Newt Task")
 
 # Create your views here.
 def index(request):
