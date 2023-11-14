@@ -23,7 +23,7 @@ def add(request):
         if form.is_valid():
             task = form.cleaned_data['task']
             tasks.append(task)
-            return HttpResponseRedirect('/tasks')
+            return HttpResponseRedirect(reverse('tasks'))
         else:
             return render(request, 'tasks/add.html', {
                 "form": form
