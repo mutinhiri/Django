@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django import forms 
+from django import forms
 
 tasks = ['foo', 'bar', 'baz']
 
@@ -9,6 +9,8 @@ class NewTaskForm(forms.Form):
     priority = forms.IntegerField(label="Priority", min_value=1, max_value=5)
 
 # Create your views here.
+
+
 def index(request):
     return render(request, "tasks/index.html", {
         'tasks': tasks
