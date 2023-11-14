@@ -19,7 +19,7 @@ def add(request):
     if request.method == 'POST':
         form = NewTaskForm(request.POST)
         if form.is_valid():
-            form.cleaned_data
+            form.cleaned_data['task']
     # return render(request, 'tasks/add.html')
     return render(request, 'tasks/add.html', {
         "form": NewTaskForm()
