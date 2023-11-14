@@ -21,7 +21,7 @@ def add(request):
         if form.is_valid():
             task = form.cleaned_data['task']
             tasks.append(task)
-    # return render(request, 'tasks/add.html')
-    return render(request, 'tasks/add.html', {
-        "form": NewTaskForm()
+        else:
+            return render(request, 'tasks/add.html', {
+                "form": NewTaskForm()
     })
