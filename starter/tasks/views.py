@@ -6,6 +6,7 @@ tasks = ['foo', 'bar', 'baz']
 
 class NewTaskForm(forms.Form):
     task = forms.CharField(label="Newt Task")
+    priority = forms.IntegerField(label="Priority")
 
 # Create your views here.
 def index(request):
