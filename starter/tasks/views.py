@@ -18,7 +18,7 @@ def index(request):
         request.session['tasks'] = []
 
     return render(request, "tasks/index.html", {
-        'tasks': tasks
+        'tasks': request.session['tasks']
     })
 
 
