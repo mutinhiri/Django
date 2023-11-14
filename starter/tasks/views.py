@@ -14,6 +14,8 @@ class NewTaskForm(forms.Form):
 
 
 def index(request):
+    if 'tasks' not in request.session:
+        
     return render(request, "tasks/index.html", {
         'tasks': tasks
     })
